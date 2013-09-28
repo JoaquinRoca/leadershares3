@@ -1,6 +1,5 @@
 # TODO #
 
-* Add a column to user table for authorized users
 * Specify email addresses in rails admin that are authorized to access Leadershares
 * Create a waitlist page
 * Create self-assessment page
