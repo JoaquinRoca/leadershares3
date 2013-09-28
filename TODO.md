@@ -1,7 +1,7 @@
 # TODO #
 
 * Specify email addresses in rails admin that are authorized to access Leadershares
-* Create a waitlist page
+
 * Create self-assessment page
 * Handle submission of self-assessment
 * Create an invite page
