@@ -1,0 +1,11 @@
+# Add application configuration variables here, as shown below.
+
+# https://cloud.google.com/console
+GOOGLE_OAUTH2_CLIENT_ID:     'foo'
+GOOGLE_OAUTH2_CLIENT_SECRET: 'bar'
+
+DEVISE_SECRET_KEY: 'SOME_LONG_RANDOM_STRING'
+
+DEVISE_MAILER_SENDER: 'email@example.com'
+
+RAILS_SECRET_KEY_BASE: 'SOME_LONG_RANDOM_STRING'
