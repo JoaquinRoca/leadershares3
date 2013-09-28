@@ -30,4 +30,8 @@ class User < ActiveRecord::Base
   def self.admins
     ENV['LEADERSHARES_ADMINS'] ? ENV['LEADERSHARES_ADMINS'].split(/[,\s]+/) : []
   end
+
+  def assessment_done?
+    false # TODO
+  end
 end
