@@ -7,6 +7,10 @@ Leadershares3::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'pages#home'
 
+  get '/waitlist' => 'pages#waitlist'
+
+  resource :response
+
   devise_for :users, controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks'
   }
