@@ -15,6 +15,10 @@ RailsAdmin.config do |config|
   # RailsAdmin may need a way to know who the current user is]
   config.current_user_method { current_user } # auto-generated
 
+  config.authorize_with do
+    redirect_to '/' unless warden.user.is_admin?
+  end
+
   # If you want to track changes on your models:
   # config.audit_with :history, 'User'
 

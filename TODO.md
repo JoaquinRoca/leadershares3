@@ -1,6 +1,5 @@
 # TODO #
 
-* Limit rails_admin access to specific email addresses.
 * Add a column to user table for authorized users
 * Specify email addresses in rails admin that are authorized to access Leadershares
 * Create a waitlist page

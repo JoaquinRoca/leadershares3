@@ -22,4 +22,12 @@ class User < ActiveRecord::Base
 
     user
   end
+
+  def is_admin?
+    User.admins.include? email
+  end
+
+  def self.admins
+    ENV['LEADERSHARES_ADMINS'] ? ENV['LEADERSHARES_ADMINS'].split(/[,\s]+/) : []
+  end
 end
