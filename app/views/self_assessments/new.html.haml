@@ -1,0 +1,10 @@
+%h1 Assessment Page
+
+%p video!
+
+= form_for @response, url: self_assessment_path do |f|
+  %ul
+    %li Q1 #{f.text_field :q1}
+    %li Q2 #{f.text_field :q2}
+    %li Q3 #{f.text_field :q3}
+    %li= submit_tag 'GO'

@@ -9,7 +9,8 @@ Leadershares3::Application.routes.draw do
 
   get '/waitlist' => 'pages#waitlist'
 
-  resource :response
+  resource :self_assessment
+  resource :rater_assessment
 
   devise_for :users, controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks'

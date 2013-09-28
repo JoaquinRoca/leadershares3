@@ -1,5 +1,8 @@
 # -*- encoding : utf-8 -*-
 class User < ActiveRecord::Base
+
+  has_many :invites
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -31,7 +34,11 @@ class User < ActiveRecord::Base
     ENV['LEADERSHARES_ADMINS'] ? ENV['LEADERSHARES_ADMINS'].split(/[,\s]+/) : []
   end
 
-  def assessment_done?
-    false # TODO
+  def self_response
+    find_or_create_self_invite.response
+  end
+
+  def find_or_create_self_invite
+    invites.find_or_create_by(relationship: 'self')
   end
 end
