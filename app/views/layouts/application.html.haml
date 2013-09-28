@@ -13,6 +13,7 @@
         %ul#nav
           - if user_signed_in?
             %li Hello #{current_user.email}
+            %li= link_to 'Assessment', new_response_path
             %li= link_to 'sign_out', destroy_user_session_path, method: :delete
             -if current_user.is_admin?
               %li= link_to 'admin', '/admin'
