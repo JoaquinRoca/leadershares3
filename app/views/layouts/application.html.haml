@@ -7,4 +7,15 @@
     = csrf_meta_tags
 
   %body
+    .navbar
+      .navbar-inner
+        = link_to 'Leadershares', root_path
+        %ul#nav
+          - if user_signed_in?
+            %li Hello #{current_user.email}
+            %li= link_to 'sign_out', destroy_user_session_path, method: :delete
+            -if current_user.is_admin?
+              %li= link_to 'admin', '/admin'
+          - else
+            %li= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2)
     = yield
